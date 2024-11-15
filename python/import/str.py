@@ -177,11 +177,11 @@ l = sorted(list2, reverse=True)
 print(l)
 list2.sort(reverse=True)
 
-def print_info(name, **kwargs):   # *args 和 **kwargs 是用来处理可变数量的参数的特殊语法
+def print_info(*name, **kwargs):   # *args 和 **kwargs 是用来处理可变数量的参数的特殊语法   name参数，kwargs 多个关键字参数，关键字参数 k=value
     print(f"Name: {name}")
     for key, value in kwargs.items():
         print(f"{key}: {value}")
 
 # 调用函数时传入多个关键字参数
-print_info("Alice", age=25, city="New York")
+print_info("Alice", "1",age=25, city="New York")
 
