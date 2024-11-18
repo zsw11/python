@@ -90,3 +90,11 @@ def print_number(number):
         print(print_xian())
         i += 1
 print_number(3)
+
+def sum(a,b,c):
+    return a+b+c
+print(sum(1,2,3))
+
+def avg(a,b,c):
+    return sum(a,b,c,)/3
+print(avg(1,2,3))
