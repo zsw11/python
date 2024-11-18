@@ -9,6 +9,12 @@
 # 性能	较高，编译型语言	较低，解释型语言
 # 跨平台	通过 JVM 跨平台	通过解释器支持跨平台
 
+# pip 是 Python 包的管理工具，提供了对 Python 包的查找、下载、安装、卸载的功能；pip 已内置于 Python 3.4 和 2.7 及以上版本。
+# pip list
+
+# python安装本地宝包
+# pip install /path/to/package
+
 
 print("你好，python")
 a=10
