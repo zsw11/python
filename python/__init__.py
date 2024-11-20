@@ -15,7 +15,6 @@
 # python安装本地宝包
 # pip install /path/to/package
 
-
 print("你好，python")
 a=10
 print(a)

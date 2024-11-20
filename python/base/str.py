@@ -173,6 +173,7 @@ list1 = ["a", 1, "b", 2, "c", 3]
 list1[1:4] = [4, "d", 5]   #修改一些元素，顾头不顾尾（包含下标1，不含下标4）
 print(list1)
 
+# sorted sort排序， sorted 返回一个新的已排序列表。
 l = sorted(list2, reverse=True)
 print(l)
 list2.sort(reverse=True)
