@@ -10,5 +10,5 @@ if y not in [0, 2]:
 if y == 0:
     print("你输入的是剪刀")
 
-import python.hanshu
+import python.base.hanshu
 python.hanshu.add(1,2)  #引入python包下 hanshu.py里的add方法
