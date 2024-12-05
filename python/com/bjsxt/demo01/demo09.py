@@ -18,7 +18,7 @@ class Programmer(Person):
     def work(self):
         print("我是：" + self.name + "，我的工作是写代码和bug")
         # 调用父类被覆盖的方法
-        super(Programmer, self).work()
+        # super(Programmer, self).work()
 
 
 programmer = Programmer()

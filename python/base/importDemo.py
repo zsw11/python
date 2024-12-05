@@ -10,5 +10,7 @@ if y not in [0, 2]:
 if y == 0:
     print("你输入的是剪刀")
 
-import python.base.hanshu
-python.hanshu.add(1,2)  #引入python包下 hanshu.py里的add方法
+# import python.base.hanshu
+from python.base import hanshu
+# 当你使用 from python.base import hanshu 这样的导入语句时，Python 会按照模块和包的层次结构依次执行每个包中的 __init__.py 文件
+hanshu.add(1,2)  #引入python包下 hanshu.py里的add方法

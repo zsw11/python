@@ -8,5 +8,5 @@ class User:
         return "狗剩子"
 
 user = User();
-# user.say_hello()
-user.__my_name()
+user.say_hello()
+# user.__my_name()
