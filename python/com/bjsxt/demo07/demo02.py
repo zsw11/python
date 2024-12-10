@@ -1,7 +1,7 @@
 from pymysql import *
 
 # 获取连接
-conn = connect(host='localhost', user='root', password='123456', database='pydb')
+conn = connect(host='192.168.1.164', user='root', password='123456', database='govnet')
 # 获取游标
 mycur = conn.cursor()
 

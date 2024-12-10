@@ -1,7 +1,7 @@
 from pymysql import *
 
 # 建立到数据库的连接
-conn = connect(host='localhost', user='root', password='123456')
+conn = connect(host='192.168.1.164', user='root', password='govnet')
 # 获取游标
 mycur = conn.cursor()
 # 执行创建数据库的语句
