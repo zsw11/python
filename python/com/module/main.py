@@ -1,7 +1,7 @@
 # main.py
 
 # 导入整个模块
-import python.module.module as mymodule
+import python.com.module.module as mymodule
 
 # 调用模块中的函数
 mymodule.greet("Alice")
@@ -9,7 +9,7 @@ result = mymodule.add(3, 5)
 print(f"3 + 5 = {result}")
 
 # 从模块中导入特定的函数
-from python.module.module import multiply
+from python.com.module.module import multiply
 
 # 调用导入的函数
 product = multiply(4, 6)

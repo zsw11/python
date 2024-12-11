@@ -70,12 +70,12 @@ print(b.tell())
 # with expression [as variable]:
     # statement
 
-with open("hello.txt","r",encoding="UTF-8") as file_obj:
+with open("hello.txt", "r", encoding="UTF-8") as file_obj:
     read = file_obj.read(5)
     print(read)
 
 # a 追加写入，
-with open("hello.txt","a+",encoding="utf-8") as file_obj:
+with open("hello.txt", "a+", encoding="utf-8") as file_obj:
     print(file_obj.tell())    # a 追加模式，文件指针会移到文件末尾
     # print(file_obj.read())  # 指针在文件莫问，读取数据失败
     file_obj.seek(0)   # 移动文件到头
