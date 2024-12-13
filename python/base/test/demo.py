@@ -13,5 +13,19 @@ print("over")  # 4. over
 # print(id(p2))  # name 'p2' is not defined
 doc__ = p1.__class__
 print(doc__)
-doc2__ = p2.__class__
-print(doc2__)
+# doc2__ = p2.__class__
+# print(doc2__)
+
+def outer():
+    cheer = 'hello '
+
+    def inner(name):
+        return cheer + name
+
+    return inner
+
+
+if __name__ == "__main__":
+    # 输出hello kevin
+
+    print(outer()('kevin'))
