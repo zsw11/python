@@ -1,9 +1,9 @@
 # 定义一个类
 class MyClass:
-    class_var = "I am a class variable"
+    class_var = "I am a class variable"  # 类
 
     def __init__(self, instance_var):
-        self.instance_var = instance_var
+        self.instance_var = instance_var  # 实例属性
 
     # 实例方法
     def instance_method(self):
