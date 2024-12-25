@@ -2,6 +2,12 @@ print("hello")
 print('hello')
 print('''hello''')
 
+from collections.abc import Iterable
+
+instance = isinstance('abc', Iterable) # 判断是否可迭代
+print(instance)
+
+
 # \ 转义
 print('What\'s your name ?')
 print("Do you know \"Python\" ?")
