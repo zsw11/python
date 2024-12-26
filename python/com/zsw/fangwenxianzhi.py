@@ -1,7 +1,10 @@
 class Student(object):
+    student = '学生'  # 类属性，属于类
+
     def __init__(self,name,score):
         self.__name = name
         self.__score = score
+
 
     def print_score(self):
         print('%s: %s' % (self.__name, self.__score))
@@ -21,4 +24,5 @@ student.get_score()
 student.get_name()
 # 在Python中，变量名类似__xxx__的，也就是以双下划线开头，并且以双下划线结尾的，是特殊变量，特殊变量是可以直接访问的
 
-type(123)
+print(type(123))
+print(isinstance(student, Student))
