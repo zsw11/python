@@ -1,0 +1,41 @@
+import multiprocessing
+
+
+def worker(num):
+   print(f"Worker {num} is running")
+
+if __name__ == '__main__':
+    process = []
+    for i in range(5):
+        p = multiprocessing.Process(target=worker, args=(i,))
+        process.append(p)
+        p.start()
+
+    for p in process:
+        p.join()
+
+    print("All workers are finished")
+# 在上面的代码中，每个进程在独立的内存空间中运行，彼此之间不会直接共享状态。
+
+
+def worker2(shared_array, lock):
+    with lock:  # 使用锁来保护对共享数据的访问
+        print("---第几个进程" , shared_array[0])
+        shared_array[0] += 1  # 修改共享内存中的第一个元素
+
+if __name__ == '__main__':
+    shared_array = multiprocessing.Array('i', 1)  # 创建一个共享内存的数组，大小为 1
+    print("共享数组大小是：", len(shared_array))
+    lock = multiprocessing.Lock()  # 创建一个锁
+
+    processes = []
+    for _ in range(10):  # 创建10个进程来修改共享数组
+        p = multiprocessing.Process(target=worker2, args=(shared_array, lock))
+        processes.append(p)
+        p.start()
+
+    for p in processes:
+        p.join()
+
+    print("10个进程运行完后，共享数组的大小：", shared_array[0])  # 输出修改后的共享数据
+# 通过使用Lock，确保每个进程在修改shared_array[0]时，不会同时有其他进程修改它，从而避免了竞态条件。

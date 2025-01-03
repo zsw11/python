@@ -13,6 +13,8 @@ class TestCalc(unittest.TestCase):
     @unittest.skip("Skipping this test.")
     def test_example(self):
         self.assertEqual(1, 2)
+
+    #测试方法必须以test_开头
     def test_add(self):
         # 测试加法函数
         self.assertEqual(add(1, 2), 3)  # 断言 1 + 2 == 3
