@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     processes = []
     for _ in range(10):  # 创建10个进程来修改共享数组
-        p = multiprocessing.Process(target=worker2, args=(shared_array, lock))
+        p = multiprocessing.Process(target=worker2, args=(shared_array, lock))  # 创建进程 work2， 参数是 shared_array, lock
         processes.append(p)
         p.start()
 
